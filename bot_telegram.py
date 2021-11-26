@@ -15,12 +15,10 @@ import os
 async def on_satrter(_):
     print("bot is online ")
 
-from handlers import client1,  other,admin
-
-admin.register_handlers_adnmin(dp)
-
-client1.register_handlers_client(dp)
+import client1, admin , other
 other.register_handlers_other(dp)
+client1.register_handlers_client(dp)
+admin.register_handlers_adnmin(dp)
 '''********************************client part ***********************'''
 # @dp.message_handler(commands=['start','help'])
 # async def command_start(message:types.Message):
